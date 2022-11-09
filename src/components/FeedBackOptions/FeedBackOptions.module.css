@@ -1,0 +1,18 @@
+.btnList {
+    display: flex;
+    justify-content: left;
+    align-items: center;
+    list-style: none;
+}
+
+
+.btn {
+    width: 100px;
+    height: 30px;
+    margin: 10px;
+    border-radius: 4px;
+    outline: 1px solid gray;
+    font-size: 16px;
+    font-weight: 600;
+    
+}
