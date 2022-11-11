@@ -2,12 +2,11 @@ import PropTypes from 'prop-types'
 import s from './FeedBackOptions.module.css'
 
 const FeedBackOptions = ({ options, onLeaveFeedback }) => {
-    console.log('options', options);
     return (
     <ul className={s.btnList}>
-        {options.map(option => (
+        {Object.keys(options).map(option => (
             <li key={option}>
-                <button className={s.btn} type="button" onClick={() => onLeaveFeedback(option)}>{option}</button>
+                <button className={s.btn} type="button" name={option} onClick={() => onLeaveFeedback(option)}>{option}</button>
             </li>
         ))}
     </ul>
@@ -15,7 +14,7 @@ const FeedBackOptions = ({ options, onLeaveFeedback }) => {
 };
 
 FeedBackOptions.propTypes = {
-    options: PropTypes.array.isRequired,
+    options: PropTypes.object.isRequired,
     onLeaveFeedback: PropTypes.func.isRequired,
 };
 
