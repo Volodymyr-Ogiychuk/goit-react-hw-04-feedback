@@ -25,7 +25,7 @@ const App = () => {
     }
   };
 
-  const  countPositiveFeedbackPercentage = () => (good / total || 1) * 100;
+  const  countPositiveFeedbackPercentage = () => (good !== 0 ? (good / total || 1) * 100 : 0)
   const total = good + neutral + bad;  
   const options = { good, neutral, bad };
   
